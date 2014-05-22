@@ -1,4 +1,4 @@
-This add-on for ATK4 to send mail to subscribers
+This is add-on for ATK4 to send mail to subscribers
 
  Mail sender mechanism is released for ApiCLI, but it's possible to use from ApiWEB.
 Task must be started from page 'sendingM'
