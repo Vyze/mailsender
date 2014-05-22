@@ -1,0 +1,44 @@
+This add-on for ATK4 to send mail to subscribers
+
+ Mail sender mechanism is released for ApiCLI, but it's possible to use from ApiWEB.
+Task must be started from page 'sendingM'
+
+Installation:
+1. Add these lines to yor API:
+ $this->add('vyze\mailsender\Controller_Mailsender');
+
+1.1. Add vyze\logger if you want to log process; set TRUE to $use_log
+ $this->add('vyze\logger\Controller_Logger'); ????
+
+2. Extend all pages to your API from mailsender/page
+  example: class page_subscriber extends vyze\mailsender\page_subscribersM {}
+
+3. Use tools/cron_mail.php to start sending by cron.
+ As alternative way you can execute mailsender from extended page SendingM by adding this line to submit:
+ $this->api->mailsender->execute();
+ In this case, mails will be sent during the hoster's limits of mail sending
+
+Algo:
+1. Create log file
+2. Get main settings  and check if mail process is active
+3. Get queue of subscriber
+3.1 Get user's subscribe categories
+4. Get all aritcles from set period
+4.1 Get article's categories
+5. Form letter
+6. Send letters to users
+7. Clear subscriber queue and change user's 'last-mail-date' field to current date
+8. Switch setting's active state to inactive.
+
+Dependencies:
+    vyze/logger
+    rvadym/x_tiny_mce
+
+Usage:
+
+Example:
+
+Author:
+    Vladislav Polyukhovich aka Vyze
+
+TODO: correct design and language
