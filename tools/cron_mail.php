@@ -1,10 +1,10 @@
 <?php
 /**/
-$_SERVER['HTTP_HOST'] = 'crioclub';
+$_SERVER['HTTP_HOST'] = 'host';
 $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
 
 $_SERVER['REQUEST_METHOD'] = 'GET';
-chdir('/home/crioclub/public_html/');
+chdir('public_html_directory/');
 /*
 
 $message = "cron works! Dir: ".getcwd()."\r\n";
