@@ -17,7 +17,7 @@ VALUES  (val_1_int, 'val_2_string', val_3_date),
 
 
 /** general*/
-$basename = 'cryo';
+$basename = '<database_name>';
 $init_id = 100; //initial ID for all tables
 $text = "START TRANSACTION;";// sql text
 
@@ -25,9 +25,9 @@ $text = "START TRANSACTION;";// sql text
 
 /**table user*/
 $count_of_lines = 500;
-$emails = array('cryo.test@yandex.ru','cryo.test@yandex.com','cryo.test@yandex.ua','cryo.test@yandex.kz','cryo.test@yandex.by','cryo.test@ya.ru');
+$emails = array(); //array of strings
 $cur_email = current($emails);
-$password = 'tester';
+$password = '';
 
 $header = "INSERT INTO `".$basename."`.`user` (`id`, `name`, `email`, `password`, `about`, `avatar_id`, `type`, `is_active`, `is_subscriber`, `last_mail_date`) VALUES ";
 $values= "";
