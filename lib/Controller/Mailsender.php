@@ -44,7 +44,7 @@ class Controller_Mailsender extends \Controller {
     public $log_str = 'Stop execution: ';
 
     //base path for article link
-    public $article_path_out = 'http://crioclub.com/articles/';
+    public $article_path_out = 'http://my_domain/articles/';
     //sender's email
     public $sender_email=null;//no-reply@example.com
 
